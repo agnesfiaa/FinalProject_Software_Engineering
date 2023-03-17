@@ -1,0 +1,25 @@
+BEGIN
+    READ AND WRITE "banyakItem" with number
+    READ AND WRITE "i" with number
+    READ AND WRITE "jumlahBeli" with number
+    READ AND WRITE "hargaItem" with number
+    READ AND WRITE "hargaBeli" with number
+    READ AND WRITE "totHarga" with number
+    READ AND WRITE "namaItem" with text
+    STORE "hargaBeli" with "0"
+    STORE "totHarga" with "0"
+    PRINT "Masukkan banyak item"
+    READ "banyakItem"
+    FOR "i" from 1 in "banyakItem"
+        PRINT "Masukkan nama item"
+        READ "namaItem"
+        PRINT "Masukkan jumlah beli"
+        READ "jumlahBeli"
+        PRINT "Masukkan harga item"
+        READ "hargaItem"
+        STORE "hargaBeli" with "jumlahBeli * hargaItem"
+        STORE "totHarga" with "totHarga + hargaBeli"
+    END FOR
+
+    PRINT "Total Bayar: " AND totHarga
+END
